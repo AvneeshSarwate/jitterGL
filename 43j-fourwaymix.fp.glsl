@@ -2,6 +2,8 @@ uniform vec4 a;
 uniform vec4 b;
 uniform vec4 c;
 uniform vec4 d;
+uniform vec2 resolution;
+uniform float time;
 
 // define our varying texture coordinates
 varying vec2 texcoord0;
@@ -25,5 +27,6 @@ void main (void)
 	
 	// perform our calculation and write our data to the fragment color
 	gl_FragColor = a*input0 + b*input1 + c*input2 + d*input3;
+    gl_FragColor = vec4(texcoord0.x/320., texcoord0.y/240., mod(time, 1.0), 0.);
 	
 }

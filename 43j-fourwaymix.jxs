@@ -7,7 +7,8 @@
 	<param name="tex1" type="int" default="1" />
 	<param name="tex2" type="int" default="2" />
 	<param name="tex3" type="int" default="3" />
-	<language name="glsl" version="1.0">
+	<param name="time" type="float" default="0.0" />
+	<language name="glsl" version="1.2">
 		<bind param="a" program="fp" />
 		<bind param="b" program="fp" />
 		<bind param="c" program="fp" />
@@ -16,6 +17,7 @@
 		<bind param="tex1" program="fp" />
 		<bind param="tex2" program="fp" />
 		<bind param="tex3" program="fp" />
+		<bind param="time" program="fp" />
 		<program name="vp" type="vertex" source="43j-fourwaymix.vp.glsl" />
 		<program name="fp" type="fragment" source="43j-fourwaymix.fp.glsl" />
 	</language>
