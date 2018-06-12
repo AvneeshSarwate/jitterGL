@@ -22,16 +22,16 @@ void main (void)
 {
     vec2 resolution = vec2(320., 240);
 	// sample our textures
-	vec4 input0 = texture2DRect(tex0, mod(texcoord0 + time*20., resolution));
-	vec4 input1 = texture2DRect(tex1, mod(texcoord1 + time*20., resolution));
+	vec4 input0 = texture2DRect(tex0, mod(texcoord0 + vec2(time*120., 0.), resolution));
+	vec4 input1 = texture2DRect(tex1, mod(texcoord1 + vec2(time*165., 0.), resolution));
 	vec4 input2 = texture2DRect(tex2, texcoord2);
 	vec4 input3 = texture2DRect(tex3, texcoord3);
 	
-    vec4 c;
-    if(texcoord0.y > resolution.y / 2.) c = input0;
-    else c = input1;
+    vec4 cc;
+    if(texcoord0.y > resolution.y / 2.) cc = input0;
+    else cc = input1;
 	// perform our calculation and write our data to the fragment color
-	gl_FragColor = c;
+	gl_FragColor = cc;
     // gl_FragColor = vec4(texcoord0.x/320., texcoord0.y/240., mod(time, 1.0), 0.);
 	
 }
