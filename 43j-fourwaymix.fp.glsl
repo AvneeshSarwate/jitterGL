@@ -50,10 +50,13 @@ void main (void)
 	vec4 input3 = texture2DRect(tex3, texcoord3);
 
     vec2 stN = uvN();
-    stN = rotate(stN, vec2(0.5), time/5.);
+    stN = rotate(stN, vec2(0.5), time);
     float numStripes = 10.;
-    float stripeMod = mod(floor(quant(stN.x, numStripes)*numStripes), 2.);   
-    vec4 cc = stripeMod == 1. ? input0 : input1;
+    float stripeMod = mod(floor(quant(stN.x, numStripes)*numStripes), 3.);   
+    vec4 cc = vec4(0.);
+    if(stripeMod == 0.) cc = input0;
+    if(stripeMod == 1.) cc = input1;
+    if(stripeMod == 2.) cc = input2;
 
 	// perform our calculation and write our data to the fragment color
 	gl_FragColor = cc;
