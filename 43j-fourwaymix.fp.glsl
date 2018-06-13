@@ -12,7 +12,7 @@ uniform sampler2DRect tex1;
 uniform sampler2DRect tex2;
 uniform sampler2DRect tex3;
 
-vec2 resolution = vec2(320., 240);
+vec2 resolution = vec2(640., 480.);
 vec2 center = resolution/2.;
 
 vec2 rotate(vec2 space, vec2 center, float amount){
