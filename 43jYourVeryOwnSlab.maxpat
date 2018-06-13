@@ -177,7 +177,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1140.0, 364.0, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "48 0 1"
+					"text" : "34 0 1"
 				}
 
 			}
@@ -1707,18 +1707,9 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"order" : 0,
-					"source" : [ "obj-28", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"destination" : [ "obj-35", 0 ],
 					"midpoints" : [ 300.56427, 139.0, 221.5, 139.0 ],
-					"order" : 1,
 					"source" : [ "obj-28", 0 ]
 				}
 
